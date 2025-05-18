@@ -24,7 +24,6 @@ export const RegisterPet = ({back}) => {
             });
             setPet({});
         } catch (error) {
-            console.error("Error al registrar mascota:", error);
             Swal.fire({
                 icon: "error",
                 text: "Error al registrar mascota",

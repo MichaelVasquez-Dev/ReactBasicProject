@@ -14,9 +14,7 @@ export const PetsContainer = () => {
 
     const getPets = async () => {
         const respPets = await getAllPetsByUserId();
-        console.log(respPets);
         setPets(respPets);
-        console.log(pets);
     }
 
     const back = () => {

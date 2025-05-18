@@ -19,7 +19,6 @@ const uploadImage = async (formData) => {
         const res = await axios.post(apiUrl, formData);
         return res.data.secure_url; 
     } catch (error) {
-        console.log(error);
         Swal.fire({
             icon: "error",
             text: "Error al subir la imagen",

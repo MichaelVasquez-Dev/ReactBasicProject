@@ -29,7 +29,7 @@ const login = async (email, password) => {
             });
             return false;
         }
-        
+
         localStorage.setItem('isAuthenticate', true)
         localStorage.setItem('user_name', `${user.name} ${user.lastName}`);
         localStorage.setItem('role', user.role);
@@ -37,7 +37,6 @@ const login = async (email, password) => {
         return true;
         
     } catch (error) {
-        console.log(error);
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
@@ -61,7 +60,6 @@ const isAuthenticated = () => {
 
 const registerNewUser = async (user) => {
     
-    console.log(user);
     if(user.password != user.password2){
         Swal.fire({
             icon: 'error',
@@ -84,7 +82,6 @@ const registerNewUser = async (user) => {
         });
         
     } catch (error) {
-        console.log(error);
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
